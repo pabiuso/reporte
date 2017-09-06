@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Optimal Crop" />
+
+
+<title>Reporte</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script src="jquery.js" type="text/javascript"></script>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+<!--CRIS ESTO SE AGREGA!-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+<!--FIN!-->
+<link rel="stylesheet" type="text/css" href="stilo_nuevo_base.css">
+</head>
+
+<body>
+
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="fluid-row" id="header">
+	<div class="header_top">
+		<h1 class="title toc-ignore"><a href="javascript:history.back();" title="Volver" class="volver"><img src="img/icos/ic_arrow_back.png" alt="Volver"></a>REPORTE DE RIEGO</h1>
+		<h2>16 Marzo 2016 al 16 Julio 2016 <small>| Profundidades: 15, 30 y 45</small></h2>
+	</div>
+	<nav class="header_bottom">
+		<ul>
+			<li><a href="#mediciones">MEDICIONES</a></li>
+			<li><a href="#riegos">RIEGOS</a></li>
+			<li><a href="#analisis-riegos">ANÁLISIS DE RIEGO</a></li>
+			<li><a href="#analisis-humedad">ANÁLISIS DE HUMEDAD</a></li>
+		</ul>
+	</nav>
+	<a href="#" id="btt_print" title="Imprimir"><img src="img/icos/ic_print.png"></a>
+</div>
+
+<div id="content">
+	<div id="titulo" class="bg-gris">
+		<h1>Nombre Campo</h1>
+		<h2>Nombre Sector</h2>
+		<p class="bajada">El siguiente reporte muestra resultados considerando las mediciones captadas en el periodo de fechas definido y para los sensores a niveles de profundidad seleccionados. </p>
+	</div>
+	
+	
+	<div id="mediciones">
+		<section>
+			<header>
+				<h2>Mediciones</h2>
+				<p>Gráfico de las mediciones captadas en el tiempo, diferenciados por niveles de profundidad.</p>
+			</header>
+			<img src="img/2_datos_seleccion.png">
+		</section>
+		
+		<section>
+			<header>
+				<h3>Detalles de las Mediciones consideradas</h3>
+				<p>Tabla con detalle de las mediciones consideradas en este reporte. Se muestra para cada nivel de profundidad: rango inferior y superior captado; cantidad total de datos; mediciones ausentes en el periodo de fechas; y moda de frecuencia entre mediciones.</p>
+			</header>
+			
+			<table>
+		
+		<thead>
+		<tr class="header">
+		<th align="left">Sensor</th>
+		<th align="right">Rango Inf.</th>
+		<th align="right">Rango Sup.</th>
+		<th align="right">Cantidad Datos</th>
+		<th align="right">Mediciones Ausentes [%]</th>
+		<th align="right">Moda Frecuencia [min.]</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="even">
+		<td align="left">Profundidad 15</td>
+		<td align="right">1.24</td>
+		<td align="right">7.84</td>
+		<td align="right">6521</td>
+		<td align="right">0 (0)</td>
+		<td align="right">30</td>
+		</tr>
+		<tr class="odd">
+		<td align="left"><strong>Profundidad 30</strong></td>
+		<td align="right"><strong>3.91</strong></td>
+		<td align="right"><strong>15.99</strong></td>
+		<td align="right"><strong>6521</strong></td>
+		<td align="right"><strong>0 (0)</strong></td>
+		<td align="right"><strong>30</strong></td>
+		</tr>
+		<tr class="even">
+		<td align="left">Profundidad 45</td>
+		<td align="right">-0.23</td>
+		<td align="right">13.71</td>
+		<td align="right">6521</td>
+		<td align="right">0 (0)</td>
+		<td align="right">30</td>
+		</tr>
+		<tr class="odd">
+		<td align="left"><strong>temperature</strong></td>
+		<td align="right"><strong>20</strong></td>
+		<td align="right"><strong>20</strong></td>
+		<td align="right"><strong>6521</strong></td>
+		<td align="right"><strong>0 (0)</strong></td>
+		<td align="right"><strong>30</strong></td>
+		</tr>
+		</tbody>
+		</table>
+		</section>
+		
+		<div class="align-right"><a href="#" class="subir"></a></div>
+	</div>
+	
+	<div id="riegos">
+		<section>
+			<header>
+				<h2>Riegos del período </h2>
+			</header>
+			<div class="bg-gris">
+				<span class="big">13</span> Riegos detectados &thinsp;&thinsp;&thinsp;
+				<span class="big">3h 45m</span> Tiempo de duración promedio de los riegos
+			</div>
+		</section>
+		
+		<section>
+			<header>
+				<h3>Sumatoria de Curvas</h3>
+				<p>Gráfica con la sumatoria de todas las mediciones a los niveles de profundidad seleccionados. Se muestra los riegos diferenciados por color en el tiempo y además las líneas de capacidad de campo (CP), niveles de riego (NR) y temperatura (en grados Celsius). </p>
+			</header>
+			<img src="img/3_riegos_identificados.png">
+			
+		</section>
+		
+		<section>
+			<header>
+				<h3>Detalles de los Riegos Identificados</h3>
+				<p>Tabla con detalle de cada riego detectado. Se muestra: fecha en que inició el riego; frecuencia entre riegos; tiempo efectivo de riego; aumento de humedad que aportó; duración de caída relevante de humedad; disminución de humedad durante la caída; duración del resto de consumo; y disminución total de la humedad durante el consumo. </p>
+			</header>
+			<table>
+
+	<thead>
+	<tr class="header">
+	<th align="right">Fecha Inicio</th>
+	<th align="right">Frecuencia de Riego</th>
+	<th align="right">Tiempo de Riego</th>
+	<th align="right">Aumento de humedad en Riego </th>
+	<th align="right">Duración Caída</th>
+	<th align="right">Disminución humedad en Caída</th>
+	<th align="right">Duración Consumo</th>
+	<th align="right">Disminución humedad en Consumo</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-02 08:30:00</strong></td>
+	<td align="right"><strong>1d 3h 30m</strong></td>
+	<td align="right"><strong>3h 45m</strong></td>
+	<td align="right"><strong>+7</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>23h 45m</strong></td>
+	<td align="right"><strong>-7.5</strong></td>
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-03 12:30:00</td>
+	<td align="right">20h 0m</td>
+	<td align="right">1h 30m</td>
+	<td align="right">+4.7</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">18h 30m</td>
+	<td align="right">-2.7</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-04 09:00:00</strong></td>
+	<td align="right"><strong>1d 2h 30m</strong></td>
+	<td align="right"><strong>3h 0m</strong></td>
+	<td align="right"><strong>+7</strong></td>
+	<td align="right"><strong>2h 0m</strong></td>
+	<td align="right"><strong>-1.5</strong></td>
+	<td align="right"><strong>23h 30m</strong></td>
+	<td align="right"><strong>-5.1</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-05 12:00:00</td>
+	<td align="right">19h 30m</td>
+	<td align="right">1h 45m</td>
+	<td align="right">+4.5</td>
+	<td align="right">4h 0m</td>
+	<td align="right">-1.6</td>
+	<td align="right">17h 45m</td>
+	<td align="right">-2.3</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-06 08:00:00</strong></td>
+	<td align="right"><strong>1d 2h 30m</strong></td>
+	<td align="right"><strong>3h 0m</strong></td>
+	<td align="right"><strong>+6.7</strong></td>
+	<td align="right"><strong>3h 0m</strong></td>
+	<td align="right"><strong>-2.2</strong></td>
+	<td align="right"><strong>23h 30m</strong></td>
+	<td align="right"><strong>-5.3</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-07 11:00:00</td>
+	<td align="right">21h 0m</td>
+	<td align="right">1h 15m</td>
+	<td align="right">+4.2</td>
+	<td align="right">3h 0m</td>
+	<td align="right">-1.1</td>
+	<td align="right">19h 45m</td>
+	<td align="right">-3.1</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-08 08:30:00</strong></td>
+	<td align="right"><strong>1d 1h 30m</strong></td>
+	<td align="right"><strong>3h 45m</strong></td>
+	<td align="right"><strong>+8.2</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>21h 45m</strong></td>
+	<td align="right"><strong>-7.1</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-09 10:30:00</td>
+	<td align="right">21h 0m</td>
+	<td align="right">1h 45m</td>
+	<td align="right">+4.7</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">19h 15m</td>
+	<td align="right">-5.2</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-10 08:00:00</strong></td>
+	<td align="right"><strong>1d 2h 0m</strong></td>
+	<td align="right"><strong>2h 30m</strong></td>
+	<td align="right"><strong>+4.9</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>23h 30m</strong></td>
+	<td align="right"><strong>-5.1</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-11 10:30:00</td>
+	<td align="right">15h 0m</td>
+	<td align="right">1h 0m</td>
+	<td align="right">+3.9</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">14h 0m</td>
+	<td align="right">-3.7</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-12 02:00:00</strong></td>
+	<td align="right"><strong>1d 9h 30m</strong></td>
+	<td align="right"><strong>3h 0m</strong></td>
+	<td align="right"><strong>+5.9</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>1d 6h 30m</strong></td>
+	<td align="right"><strong>-8</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-14 08:30:00</td>
+	<td align="right">1d 10h 30m</td>
+	<td align="right">14h 30m</td>
+	<td align="right">+8.6</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">20h 0m</td>
+	<td align="right">-6</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-15 19:30:00</strong></td>
+	<td align="right"><strong>1d 19h 45m</strong></td>
+	<td align="right"><strong>3h 0m</strong></td>
+	<td align="right"><strong>+4.6</strong></td>
+	<td align="right"><strong>10h 0m</strong></td>
+	<td align="right"><strong>-2.1</strong></td>
+	<td align="right"><strong>1d 16h 45m</strong></td>
+	<td align="right"><strong>-7.1</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-17 15:45:00</td>
+	<td align="right">21h 30m</td>
+	<td align="right">3h 15m</td>
+	<td align="right">+1.7</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">18h 15m</td>
+	<td align="right">-2.6</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-19 14:15:00</strong></td>
+	<td align="right"><strong>2d 3h 0m</strong></td>
+	<td align="right"><strong>1h 15m</strong></td>
+	<td align="right"><strong>+5.1</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>2d 1h 45m</strong></td>
+	<td align="right"><strong>-11</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-21 17:45:00</td>
+	<td align="right">16h 15m</td>
+	<td align="right">1h 45m</td>
+	<td align="right">+9.5</td>
+	<td align="right">1h 0m</td>
+	<td align="right">-0.5</td>
+	<td align="right">14h 30m</td>
+	<td align="right">-1.2</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-23 11:30:00</strong></td>
+	<td align="right"><strong>23h 30m</strong></td>
+	<td align="right"><strong>6h 0m</strong></td>
+	<td align="right"><strong>+4.9</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>17h 30m</strong></td>
+	<td align="right"><strong>-3.1</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-24 11:30:00</td>
+	<td align="right">21h 30m</td>
+	<td align="right">3h 0m</td>
+	<td align="right">+4.6</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">18h 30m</td>
+	<td align="right">-3.6</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-25 09:30:00</strong></td>
+	<td align="right"><strong>2d 23h 15m</strong></td>
+	<td align="right"><strong>2h 45m</strong></td>
+	<td align="right"><strong>+4.1</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>2d 20h 30m</strong></td>
+	<td align="right"><strong>-13.1</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-28 09:15:00</td>
+	<td align="right">1d 3h 30m</td>
+	<td align="right">1h 15m</td>
+	<td align="right">+7.9</td>
+	<td align="right">6h 0m</td>
+	<td align="right">-1.2</td>
+	<td align="right">1d 2h 15m</td>
+	<td align="right">-3.5</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-29 13:15:00</strong></td>
+	<td align="right"><strong>21h 30m</strong></td>
+	<td align="right"><strong>1h 45m</strong></td>
+	<td align="right"><strong>+5.2</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>19h 45m</strong></td>
+	<td align="right"><strong>-1.9</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-03-30 11:15:00</td>
+	<td align="right">23h 45m</td>
+	<td align="right">3h 15m</td>
+	<td align="right">+4.7</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">20h 30m</td>
+	<td align="right">-3.3</td>
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-03-31 11:30:00</strong></td>
+	<td align="right"><strong>22h 0m</strong></td>
+	<td align="right"><strong>3h 0m</strong></td>
+	<td align="right"><strong>+5.2</strong></td>
+	<td align="right"><strong>10h 0m</strong></td>
+	<td align="right"><strong>-2.2</strong></td>
+	<td align="right"><strong>19h 0m</strong></td>
+	<td align="right"><strong>-1.5</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-04-01 10:00:00</td>
+	<td align="right">2d 2h 45m</td>
+	<td align="right">2h 0m</td>
+	<td align="right">+3.2</td>
+	<td align="right">2h 0m</td>
+	<td align="right">-0.6</td>
+	<td align="right">2d 0h 45m</td>
+	<td align="right">-6.4</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-04-03 13:15:00</strong></td>
+	<td align="right"><strong>20h 45m</strong></td>
+	<td align="right"><strong>1h 15m</strong></td>
+	<td align="right"><strong>+2.2</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>19h 30m</strong></td>
+	<td align="right"><strong>-3.1</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-04-04 10:30:00</td>
+	<td align="right">1d 1h 15m</td>
+	<td align="right">1h 0m</td>
+	<td align="right">+4.8</td>
+	<td align="right">4h 0m</td>
+	<td align="right">-1.7</td>
+	<td align="right">1d 0h 15m</td>
+	<td align="right">-3.4</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-04-05 12:15:00</strong></td>
+	<td align="right"><strong>2d 0h 0m</strong></td>
+	<td align="right"><strong>1d 1h 30m</strong></td>
+	<td align="right"><strong>+8.4</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>22h 30m</strong></td>
+	<td align="right"><strong>-5.2</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-04-07 12:45:00</td>
+	<td align="right">19h 15m</td>
+	<td align="right">4h 15m</td>
+	<td align="right">+4.9</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">15h 0m</td>
+	<td align="right">-1.9</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-04-08 08:30:00</strong></td>
+	<td align="right"><strong>1d 1h 30m</strong></td>
+	<td align="right"><strong>4h 30m</strong></td>
+	<td align="right"><strong>+6.4</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>21h 0m</strong></td>
+	<td align="right"><strong>-5.9</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-04-09 10:30:00</td>
+	<td align="right">1d 0h 30m</td>
+	<td align="right">3h 30m</td>
+	<td align="right">+5.9</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">21h 0m</td>
+	<td align="right">-5.7</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-04-10 11:30:00</strong></td>
+	<td align="right"><strong>1d 1h 30m</strong></td>
+	<td align="right"><strong>3h 0m</strong></td>
+	<td align="right"><strong>+6.2</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>22h 30m</strong></td>
+	<td align="right"><strong>-6.1</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-04-11 13:30:00</td>
+	<td align="right">18h 0m</td>
+	<td align="right">3h 0m</td>
+	<td align="right">+6.9</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">15h 0m</td>
+	<td align="right">-4.9</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-04-12 08:00:00</strong></td>
+	<td align="right"><strong>1d 3h 30m</strong></td>
+	<td align="right"><strong>4h 0m</strong></td>
+	<td align="right"><strong>+6.8</strong></td>
+	<td align="right"><strong>2h 0m</strong></td>
+	<td align="right"><strong>-1.5</strong></td>
+	<td align="right"><strong>23h 30m</strong></td>
+	<td align="right"><strong>-6.1</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-04-13 12:00:00</td>
+	<td align="right">20h 30m</td>
+	<td align="right">4h 0m</td>
+	<td align="right">+5.6</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">16h 30m</td>
+	<td align="right">-4.6</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-04-14 09:00:00</strong></td>
+	<td align="right"><strong>1d 1h 30m</strong></td>
+	<td align="right"><strong>3h 30m</strong></td>
+	<td align="right"><strong>+6.8</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>22h 0m</strong></td>
+	<td align="right"><strong>-7.1</strong></td>
+	</tr>
+	<tr class="even">
+	<td align="right">2017-04-15 11:00:00</td>
+	<td align="right">22h 0m</td>
+	<td align="right">3h 30m</td>
+	<td align="right">+6.8</td>
+	<td align="right">0m</td>
+	<td align="right"></td>
+	<td align="right">18h 30m</td>
+	<td align="right">-5.8</td>
+
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-04-16 09:30:00</strong></td>
+	<td align="right"><strong>1d 0h 30m</strong></td>
+	<td align="right"><strong>3h 30m</strong></td>
+	<td align="right"><strong>+6.5</strong></td>
+	<td align="right"><strong>4h 0m</strong></td>
+	<td align="right"><strong>-2.3</strong></td>
+	<td align="right"><strong>21h 0m</strong></td>
+	<td align="right"><strong>-4.4</strong></td>
+
+	</tr>
+	<tr class="even">
+	<td align="right">2017-04-17 10:30:00</td>
+	<td align="right">1d 2h 0m</td>
+	<td align="right">4h 30m</td>
+	<td align="right">+6.4</td>
+	<td align="right">2h 0m</td>
+	<td align="right">-0.9</td>
+	<td align="right">21h 30m</td>
+	<td align="right">-5.1</td>
+	</tr>
+	<tr class="odd">
+	<td align="right"><strong>2017-04-18 13:00:00</strong></td>
+	<td align="right"><strong>20h 0m</strong></td>
+	<td align="right"><strong>4h 30m</strong></td>
+	<td align="right"><strong>+10.8</strong></td>
+	<td align="right"><strong>0m</strong></td>
+	<td align="right"></td>
+	<td align="right"><strong>15h 30m</strong></td>
+	<td align="right"><strong>-10</strong></td>
+	</tr>
+	<tr class="even">
+	<td align="right">2017-04-19 09:30:00</td>
+	<td align="right">12d 22h 0m</td>
+	<td align="right">2h 30m</td>
+	<td align="right">+5.4</td>
+	<td align="right">11h 0m</td>
+	<td align="right">-4.1</td>
+	<td align="right">12d 19h 30m</td>
+	<td align="right">0</td>
+	</tr>
+	</tbody>
+	</table>
+			
+		</section>
+		
+		<div class="align-right"><a href="#" class="subir"></a></div>
+	</div>
+	
+	
+	<div id="analisis-riegos">
+		<section>
+			<header>
+				<h2>Análisis de Riego</h2>
+				<h3>Eficiencia en Líneas de Gestión</h3>
+				<p>Gráfica con la eficiencia de los riegos detectados. Se muestra riegos por sobre y bajo la capacidad de campo (CP), como también bajo y sobre los niveles de riego (NR). Se identifica para casos sobre CP y bajo NR: cantidad de eventos; sumatoria de tiempo total; y sumatoria de tiempo de riego o consumo según caso. </p>
+			</header>
+			<img src="img/5_eficiencia1.png">
+			<div class="bg-gris clearfix">
+				<div class="col_1-2">
+					<span class="big">31</span><br>
+					Eventos sobre Capacidad de Campo
+					<span class="bigger">27d 15h 15m</span>
+					Tiempo total sobre Capacidad de Campo
+					<span class="bigger">3d 16h 0m</span>
+					Tiempo de riego sobre Capacidad de Campo
+				</div>
+				<div class="col_1-2">
+					<span class="big">13</span><br>Eventos bajo Nivel de Riego
+					<span class="bigger">27d 15h 15m</span> Tiempo total bajo Nivel de Riego
+					<span class="bigger">3d 16h 0m</span> Tiempo de consumo bajo Nivel de Riego
+				</div>
+			</div>
+		</section>
+		
+		<section>
+			<header>
+				<h3>Diferencia absoluta con CP y NR</h3>
+				<p>Gráfica con la curva de diferencia absoluta de CP y NR y sus tendencias para los riegos detectados. Se muestran diferenciados los riegos fuera de las líneas de gestión (LG). </p>
+			</header>
+			
+			<img src="img/5_eficiencia2.png">
+		</section>
+		
+		<div class="align-right"><a href="#" class="subir"></a></div>
+	</div>
+	
+	
+	<div id="analisis-humedad">
+		<section>
+			<header>
+				<h2>Análisis de Humedad</h2>
+				<h3>Variación de Humedad por Día</h3>
+				<p>Gráfica con la variación de humedad por día. Por sobre el eje horizontal los aumentos de humedad que aportan los riegos y bajo este las disminuciones de humedad total. Además se muestra la curva de temperatura (en grados Celsius). </p>
+			</header>
+			<img src="img/12.png">
+		</section>
+		
+		<section>
+			<header>
+				<h3>Consumo de humedad diario</h3>
+				<p>Gráfica de la disminución diaria de la humedad en el tiempo. </p>
+			</header>
+			
+			<img src="img/13.png">
+		</section>
+		
+		<div class="align-right"><a href="#" class="subir"></a></div>
+	</div>
+
+	<footer>
+		Este reporte es un producto <a href="http://www.optimalcrop.cl" target="_blank"  title="Optimal Crop"><img src="img/optimal-crop.png" alt="Optimal Crop" class="logo_bttm"></a>
+	</footer>
+</div>
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- CRIS AGREGAR ESTO!  -->
+
+<script>
+	$('#header').find('nav').find('a').click(function(event){
+			event.preventDefault();
+		var current_a= $(this).attr('href');
+			$("html, body").animate({ scrollTop: $(current_a).offset().top - 100 }, 200);
+		});
+
+</script>
+</body>
+</html>
